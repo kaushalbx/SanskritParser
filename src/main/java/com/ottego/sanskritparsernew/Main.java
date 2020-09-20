@@ -1,16 +1,14 @@
 package com.ottego.sanskritparsernew;
 
 
-
-
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
-import static org.antlr.v4.runtime.CharStreams.fromFileName;
 import static org.antlr.v4.runtime.CharStreams.fromStream;
 
 
@@ -21,8 +19,8 @@ public class Main {
         // create a CharStream that reads from standard input
 //        ANTLRInputStream input = new ANTLRInputStream(System.in);
 
-        Charset cs = Charset.forName("UTF-8");
-       // CharStream input = fromFileName("program.txt", cs);
+        Charset cs = StandardCharsets.UTF_8;
+        // CharStream input = fromFileName("program.txt", cs);
 
         CharStream input = fromStream(Main.class.getResourceAsStream("/program.txt"), cs);
 
@@ -42,7 +40,6 @@ public class Main {
 
 
         System.out.println(tree.toStringTree(parser)); // print LISP-style tree
-
 
 
 //        String x = tree.getText().replace(" ", "*");

@@ -2090,6 +2090,7 @@ kritPrtyayPrakar
     |kanachKritPrtyay
     |syatriKritPrtyay
     |syamanKritPrtyay
+    |extraKritPratyay
     ;
 
 tumunKritPrtyay
@@ -2170,6 +2171,10 @@ syatriKritPrtyay
 
 syamanKritPrtyay
     :'स्यमान'
+    ;
+
+extraKritPratyay
+    :'घञ्'
     ;
 
 
@@ -4354,4 +4359,6 @@ WS : ' ';
                     |'ह्व॑लँ॑'
                     |'ह्वृ॒'
                     |'ह्वे॒ञ्'
+                    |'रम्'
+                    |'गम्'
                     ;

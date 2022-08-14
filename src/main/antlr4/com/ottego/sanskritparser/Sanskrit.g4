@@ -1,11 +1,15 @@
 grammar Sanskrit;
 
-adhyay
+padya
     :shlok (NEWLINE+ shlok)*
     ;
 
 shlok
     :vakya (WS vakya)* '|'
+    ;
+
+gadya
+    :vakya ((WS|NEWLINE) vakya)*
     ;
 
 vakya

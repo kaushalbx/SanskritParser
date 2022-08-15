@@ -17,11 +17,6 @@ vakya
     |(subantPada WS )* tingantPada (WS subantPada)+ '|'
     ;
 
-atideshikDhatu
-    :pratipadika '+' atideshikDhatuPratyay
-    ;
-
-
 vachya
     :kartriVachya
     |karmVachya
@@ -98,9 +93,19 @@ subantam
     ;
 
 tingantPada
-    :(dhatu | atideshikDhatu) '+' lakar '+' tingPrtyay
-    |upsarg '+' tingantPada
+    :tingantam '+' lakar '+' tingPrtyay
     ;
+
+tingantam
+    :dhatu
+    |atideshikDhatu
+    |upsarg+tingantam
+    ;
+
+atideshikDhatu
+    :pratipadika '+' atideshikDhatuPratyay
+    ;
+
 
 pratipadika
     :siddhPratipadika

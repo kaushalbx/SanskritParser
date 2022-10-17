@@ -9,8 +9,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <groupId>com.ottego.sanskritparsernew</groupId>
-    <artifactId>Sanskrit_Parser_New</artifactId>
+    <groupId>com.ottego.sanskritparser</groupId>
+    <artifactId>Sanskrit_Parser</artifactId>
     <version>1.0.0-alpha</version>
 
 

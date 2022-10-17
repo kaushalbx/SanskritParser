@@ -36,7 +36,7 @@ public class Main {
 
         ParseTreeWalker walker = new ParseTreeWalker();
 
-        ParseTree tree = parser.adhyay(); // begin parsing at init rule
+        ParseTree tree = parser.gadya(); // begin parsing at init rule
 
 
         System.out.println(tree.toStringTree(parser)); // print LISP-style tree

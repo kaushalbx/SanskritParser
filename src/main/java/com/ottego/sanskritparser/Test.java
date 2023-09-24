@@ -26,11 +26,11 @@ public class Test {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
 
         // create a parser that feeds off the tokens buffer
-        SanskritParser parser = new SanskritParser(tokens);
+        SanskritGrammarParser parser = new SanskritGrammarParser(tokens);
 
         ParseTreeWalker walker = new ParseTreeWalker();
 
-        ParseTree tree = parser.gadya(); // begin parsing at init rule
+        ParseTree tree = parser.vakya(); // begin parsing at init rule
 
 
         System.out.println(tree.toStringTree(parser)); // print LISP-style tree

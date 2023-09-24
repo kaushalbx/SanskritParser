@@ -1,0 +1,348 @@
+lexer grammar KritPratyaya;
+
+
+ /**
+ *"कृत् प्रत्यय" (krit pratyaya) refers to affixes added to verb roots (धातु पद)
+ *to form nominal words (नाम पद). These affixes modify the meaning of the verb root and
+ * transform it into nouns, adjectives, or other related forms. When a verb root combines
+ * with a "कृत् प्रत्यय," it results in the creation of new words known as "कृदन्त शब्द" (kridanta words).
+ */
+
+KRIT_PRATYAYA: (TUMUN_KRIT_PRATYAYA | ANEYYAR_KRIT_PRATYAYA | TAVYAT_KRIT_PRATYAYA | KTVAA_KRIT_PRATYAYA |
+                 SHAANACH_KRIT_PRATYAYA | SHATRU_KRIT_PRATYAYA | LYUT_KRIT_PRATYAYA | NVUUL_KRIT_PRATYAYA |
+                 NAMUL_KRIT_PRATYAYA | TRACH_KRIT_PRATYAYA | KTA_KRIT_PRATYAYA | KTAVATU_KRIT_PRATYAYA |
+                 LYAP_KRIT_PRATYAYA | KTIN_KRIT_PRATYAYA | KELIMER_KRIT_PRATYAYA | KYAP_KRIT_PRATYAYA |
+                 KVASU_KRIT_PRATYAYA | KAANACH_KRIT_PRATYAYA | SYATRU_KRIT_PRATYAYA | SYAMAAN_KRIT_PRATYAYA);
+
+
+/**
+ * "तुमुन् प्रत्यय" (Tumun Pratyaya) is a specific affix used in Sanskrit grammar.
+ * It is employed by a single doer (कर्ता) to perform two actions (क्रियाओं को करने के लिए).
+ * When Tumun Pratyaya is used, only "तुम" (tum) remains at the end of the verb root (धातु के अंत).
+ * Its meaning is "for the purpose of" or "in order to."
+ *
+ * Examples of verbs with Tumun Pratyaya:
+ * - गम् (gam) + तुमुन् (Tumun Pratyaya) = गन्तुम् (gantum) meaning "to go for the purpose of"
+ * - पा (pa) + तुमुन् (Tumun Pratyaya) = पातुम् (patum) meaning "to obtain for the purpose of"
+ * - हल् (hal) + तुमुन् (Tumun Pratyaya) = हन्तुम् (hantum) meaning "to kill for the purpose of"
+ * - पठ् (path) + तुमुन् (Tumun Pratyaya) = पठितुम् (pathitum) meaning "to read for the purpose of"
+ */
+
+TUMUN_KRIT_PRATYAYA: 'तुमुन्';
+
+/**
+ * "अनीयर् प्रत्यय" (Anīyar Pratyaya) is a specific affix used in Sanskrit grammar within the "बिधिलिङ्ग् लकार" (Bidhiliṅg Lakāra).
+ * Its primary meaning is "to want" or "desire." When Anīyar Pratyaya is used, the word form depends on the gender:
+ * - In masculine gender (पुल्लिंग), it becomes "अनीय" (anīya).
+ * - In feminine gender (स्त्रीलिंग), it becomes "अनीया" (anīyā).
+ * - In neuter gender (नपुंसकलिंग), it becomes "अनीयम्" (anīyam).
+ *
+ * Examples of words formed with Anīyar Pratyaya:
+ * - पठ् (path) + अनीयर् (Anīyar Pratyaya) = पठनीय: (pathanīyaḥ) - Masculine
+ * - पठ् (path) + अनीयर् (Anīyar Pratyaya) = पठनीया (pathanīyā) - Feminine
+ * - पठ् (path) + अनीयर् (Anīyar Pratyaya) = पठनीयम् (pathanīyam) - Neuter
+ */
+
+ANEYYAR_KRIT_PRATYAYA: 'अनीयर्';
+
+/**
+ * तव्यत् प्रत्यय (Tavyat Pratyaya) in Sanskrit Grammar
+ *
+ * "तव्यत् प्रत्यय" (Tavyat Pratyaya) is another affix used in Sanskrit grammar within the "बिधिलिङ्ग् लकार" (Bidhiliṅg Lakāra).
+ * Its primary meaning is also "to want" or "desire," similar to Anīyar Pratyaya. When Tavyat Pratyaya is used,
+ * the word form depends on the gender:
+ * - In masculine gender (पुल्लिंग), it becomes "तव्य" (tavya).
+ * - In feminine gender (स्त्रीलिंग), it becomes "तव्या" (tavyā).
+ * - In neuter gender (नपुंसकलिंग), it becomes "तव्यम्" (tavyam).
+ *
+ * Examples of words formed with Tavyat Pratyaya:
+ * - दा (da) + तव्यत् (Tavyat Pratyaya) = दातव्य: (dātavyaḥ) - Masculine
+ * - दा (da) + तव्यत् (Tavyat Pratyaya) = दातव्या (dātavyā) - Feminine
+ * - दा (da) + तव्यत् (Tavyat Pratyaya) = दातव्यम् (dātavyam) - Neuter
+ *
+ * Note: When used with Tavyat Pratyaya, generally:
+ * - The third case (तृतीया विभक्ति) is used for the subject (कर्त्ता) and the first case (प्रथमा विभक्ति) for the object (कर्म).
+ *   For example: मया ग्रन्थ पठितव्य: (I should read the book).
+ */
+
+TAVYAT_KRIT_PRATYAYA: 'तव्यत्';
+
+/**
+ * "क्त्वा प्रत्यय" (Ktva Pratyay) is an affix used in Sanskrit grammar. When Ktva Pratyay is used,
+ * it attaches to the end of a verb root (धातु) and results in the formation of words ending in 'त्वा' (tvā).
+ * This affix signifies the sense of "having done" or "after doing," and it is often used to form adverbs or participles.
+ *
+ * Examples of words formed with Ktva Pratyay:
+ * - अस् (as) + क्त्वा (Ktva Pratyay) = भूत्वा (bhūtvā)
+ * - कृ (kṛ) + क्त्वा (Ktva Pratyay) = कृत्वा (kṛtvā)
+ * - कथ् (kath) + क्त्वा (Ktva Pratyay) = कथयित्वा (kathayitvā)
+ * - दृ (dṛ) + क्त्वा (Ktva Pratyay) = दृष्ट्वा (dṛṣṭvā)
+ * - वच् (vac) + क्त्वा (Ktva Pratyay) = उक्त्वा (uktvā)
+ *
+ * The words formed with Ktva Pratyay often act as adverbs or participles in sentences.
+ */
+KTVAA_KRIT_PRATYAYA: 'क्त्वा';
+
+/**
+ * "शानच् प्रत्यय" (Shanach Pratyay) is an affix used in Sanskrit grammar, primarily in the 'लट् लकार आत्मेनपदी' tense,
+ * to form the 'प्रथम पुरुष – एकवचन' (first person singular) form of verbs. The usage of Shanach Pratyay signifies
+ * the sense of "having done" or "after doing," often implying the past perfect tense.
+ *
+ * Examples of words formed with Shanach Pratyay:
+ * - लभ् (labh) + शानच् (Shanach Pratyay) = लभमान: (labhamānaḥ)
+ * - पच् (pac) + शानच् (Shanach Pratyay) = पचमान: (pacamānaḥ)
+ * - नी (nī) + शानच् (Shanach Pratyay) = नयमान: (nayamānaḥ)
+ * - वृध् (vṛdh) + शानच् (Shanach Pratyay) = वर्धमान: (vardhamānaḥ)
+ * - वृत् (vṛt) + शानच् (Shanach Pratyay) = वर्तमान: (vartamānaḥ)
+ * - कृ (kṛ) + शानच् (Shanach Pratyay) = कुर्वाण: (kurvāṇaḥ)
+ *
+ * The words formed with Shanach Pratyay often act as verbs indicating past actions.
+ */
+
+SHAANACH_KRIT_PRATYAYA: 'शानच्';
+
+/**
+ * "शतृ प्रत्यय" (Shatra Pratyay) is an affix used in Sanskrit grammar, primarily in the 'परस्मैपदी' (active voice) tense of
+ * verbs.
+ * It is used to indicate the sense of "having done" or "after doing," often implying the past perfect tense.
+ *
+ * Examples of words formed with Shatra Pratyay:
+ * - क्रीड् (krīḍ) + शतृ (Shatra Pratyay) = क्रीडन् (krīḍan)
+ * - अर्च् (arch) + शतृ (Shatra Pratyay) = अर्चन् (archan)
+ * - गम् (gam) + शतृ (Shatra Pratyay) = गच्छन् (gacchan)
+ * - भू (bhū) + शतृ (Shatra Pratyay) = भवन् (bhavan)
+ *
+ * The words formed with Shatra Pratyay often act as verbs indicating past actions.
+ */
+
+SHATRU_KRIT_PRATYAYA: 'शतृ';
+
+/**
+ * "ल्युट् प्रत्यय" (Lyut Pratyay) is an affix used in Sanskrit grammar. When added to a root word, it results in a noun form
+ * with a neuter gender (नपुंसकलिंग).
+ * After adding Lyut Pratyay, the word ends with either "नम्" or "णम्".
+ *
+ * Examples of words formed with Lyut Pratyay:
+ * - पठ् (paṭh) + ल्युट् (Lyut Pratyay) = पठनम् (paṭhanam)
+ * - कथ् (kath) + ल्युट् (Lyut Pratyay) = कथनं (kathanam)
+ * - ज्ञा (jñā) + ल्युट् (Lyut Pratyay) = ज्ञानम् (jñānam)
+ * - कृ (kṛ) + ल्युट् (Lyut Pratyay) = करणम् (karaṇam)
+ * - स्मृ (smṛ) + ल्युट् (Lyut Pratyay) = स्मरणम् (smaraṇam)
+ *
+ * The words formed with Lyut Pratyay are typically used as nouns and often represent actions or qualities.
+ */
+
+LYUT_KRIT_PRATYAYA: 'ल्युट्';
+
+/**
+ * "ण्वूल् प्रत्यय" (Nvool Pratyay) is also known as "अफ़् प्रत्यय" (Af Pratyay). It is used in Sanskrit grammar to convey the
+ * meaning of "having" or "possessing."
+ * When added to a root word, it typically means "possessing" or "related to" and is equivalent to the suffix "-er" or
+ * "-ist" in English.
+ * After adding Nvool Pratyay, the word ends with "अक:".
+ *
+ * Examples of words formed with Nvool Pratyay:
+ * - गै (gai) + ण्वूल् (Nvool Pratyay) = गायक: (gāyakaḥ) meaning "singer" or "one who sings."
+ * - पच् (pac) + ण्वूल् (Nvool Pratyay) = पाचक: (pācakaḥ) meaning "cook" or "one who cooks."
+ * - गृह (gṛha) + ण्वूल् (Nvool Pratyay) = ग्राहक: (grāhakaḥ) meaning "customer" or "one who buys."
+ * - कृ (kṛ) + ण्वूल् (Nvool Pratyay) = कारक: (kārakaḥ) meaning "agent" or "one who does."
+ * - नृत (nṛta) + ण्वूल् (Nvool Pratyay) = नर्तक: (nartakaḥ) meaning "dancer" or "one who dances."
+ *
+ * The words formed with Nvool Pratyay typically describe a person or entity related to the action or quality expressed by the root word.
+ */
+
+NVUUL_KRIT_PRATYAYA: 'ण्वूल्';
+
+/**
+ * "णमुल् प्रत्यय" (Namul Pratyay) is used in Sanskrit grammar to indicate actions that will happen in the future with a
+ * sense of certainty. It is typically added to root verbs (kriyāvācaka dhātus) that indicate virtuous or meritorious
+ * actions to convey the idea of performing those actions for the purpose of gaining merit.
+ * After adding Namul Pratyay, the word ends with "ण्, उल्, इत्, अम्" based on the specific context.
+ *
+ * Examples of words formed with Namul Pratyay:
+ * - स्मृ (smṛ) + णमुल् (Namul Pratyay) = स्मारम् (smāram) indicating "remembering" with a virtuous sense.
+ * - स्तु (stu) + णमुल् (Namul Pratyay) = स्तावम् (stāvam) indicating "praising" with a sense of virtuous action.
+ * - भुज् (bhuj) + णमुल् (Namul Pratyay) = भोजम् (bhōjam) indicating "enjoying a meal" in a virtuous manner.
+ * - मृश् (mṛś) + णमुल् (Namul Pratyay) = मर्शम् (marśam) indicating "touching" with a virtuous intention.
+ * - हस् (has) + णमुल् (Namul Pratyay) = हासम् (hāsam) indicating "smiling" in a virtuous sense.
+ *
+ * The words formed with Namul Pratyay are associated with actions that are performed with a sense of righteousness and
+ * merit.
+ */
+
+NAMUL_KRIT_PRATYAYA: 'णमुल्';
+
+/**
+ * "तृच् प्रत्यय" (Trach Pratyay) is used in Sanskrit grammar to indicate a sense of "doer" or "one who does." It is added to
+ * root verbs (kriyāvācaka dhātus) to form nouns that denote the one who performs the action indicated by the verb.
+ * These nouns typically translate to "one who does" or "doer of."
+ * After adding Trach Pratyay, the word ends with "तृ" based on the specific context, which signifies the sense of the
+ * doer.
+ *
+ * Examples of words formed with Trach Pratyay:
+ * - कृ (kṛ) + तृच् (Trach Pratyay) = कर्तृ (kartṛ) indicating "one who does" or "doer."
+ * - दा (dā) + तृच् (Trach Pratyay) = दातृ (dātṛ) indicating "one who gives" or "giver."
+ * - ज्ञा (jñā) + तृच् (Trach Pratyay) = ज्ञातृ (jñātṛ) indicating "one who knows" or "knower."
+ * - गम् (gam) + तृच् (Trach Pratyay) = गन्तृ (gantr) indicating "one who goes" or "goer."
+ *
+ * The words formed with Trach Pratyay are associated with the idea of the doer or performer of actions.
+ */
+
+TRACH_KRIT_PRATYAYA: 'तृच्';
+
+/**
+ * "क्त् प्रत्यय" (Kta Pratyaya) is used in Sanskrit grammar in the "लङ्ग् लकार - भूतकाल" (past tense) to indicate actions that
+ * have been completed in the past. It is added to root verbs (kriyāvācaka dhātus) to form past participles. These past
+ * participles typically translate to "having done" or "having performed" in English.
+ * After adding Kta Pratyaya, the word ends with "त:", "ता", or "तम्" based on the gender of the subject. "त:" indicates
+ * masculine, "ता" indicates feminine, and "तम्" indicates neuter.
+ *
+ * Examples of words formed with Kta Pratyaya:
+ * - कृ (kṛ) + क्त् (Kta Pratyaya) = कृत: (kṛtaḥ) indicating "having done" (masculine).
+ * - श्रु (śru) + क्त् (Kta Pratyaya) = श्रुत: (śrutaḥ) indicating "having heard" (masculine).
+ * - क्री (krī) + क्त् (Kta Pratyaya) = क्रीत: (krītaḥ) indicating "having bought" (masculine).
+ * - भक्ष् (bhakṣ) + क्त् (Kta Pratyaya) = भक्षिता (bhakṣitā) indicating "having eaten" (feminine).
+ * - दृश् (dṛś) + क्त् (Kta Pratyaya) = दृष्ट: (dṛṣṭaḥ) indicating "having seen" (masculine).
+ *
+ * The words formed with Kta Pratyaya are used to express actions that were completed in the past.
+ */
+
+KTA_KRIT_PRATYAYA: 'क्त्';
+
+/**
+ * क्तवतु प्रत्यय (Ktavatu Pratyaya) in Sanskrit Grammar
+ *
+ * "क्तवतु प्रत्यय" (Ktavatu Pratyaya) is used in Sanskrit grammar in the "लङ्ग् लकार - भूतकाल" (past tense) to indicate actions
+ * that have been completed in the past. It is added to root verbs (kriyāvācaka dhātus) to form past participles.
+ * These past participles typically translate to "having done" or "having performed" in English.
+ * After adding Ktavatu Pratyaya, the word ends with "तवान्", "तवती", or "तवत्" based on the gender of the subject. "तवान्"
+ * indicates masculine, "तवती" indicates feminine, and "तवत्" indicates neuter.
+ *
+ * Examples of words formed with Ktavatu Pratyaya:
+ * - ज्ञा (jñā) + क्तवतु (Ktavatu Pratyaya) = ज्ञातवान् (jñātavān) indicating "having known" (masculine).
+ * - गम् (gam) + क्तवतु (Ktavatu Pratyaya) = गतवान् (gatavān) indicating "having gone" (masculine).
+ * - कृ (kṛ) + क्तवतु (Ktavatu Pratyaya) = कृतवान् (kṛtavān) indicating "having done" (masculine).
+ *
+ * The words formed with Ktavatu Pratyaya are used to express actions that were completed in the past.
+ */
+
+KTAVATU_KRIT_PRATYAYA: 'क्तवतु';
+
+/**
+ * "ल्यप् प्रत्यय" (Lyap Pratyaya) is used in Sanskrit grammar to form words that convey the meaning of "doing" or "doing
+ * with." It is added to root verbs (kriyāvācaka dhātus) when there is an upasarga (prefix) present in the verb,
+ * excluding the prefixes अ (a) and अन् (an).
+ * After adding Lyap Pratyaya, the word ends with "य" or "त्य" based on the context.
+ *
+ * Examples of words formed with Lyap Pratyaya:
+ * - ज्ञा (jñā) + ना (upasarga) + ल्यप् (Lyap Pratyaya) = ज्ञानाय (jñānāya) indicating "for knowing" or "to know."
+ * - वि (vi) + धा (upasarga) + ल्यप् (Lyap Pratyaya) = विधाय (vidhāya) indicating "for placing" or "to place."
+ * - वि (vi) + हा (upasarga) + ल्यप् (Lyap Pratyaya) = विहाय (vihāya) indicating "for leaving" or "to leave."
+ *
+ * The words formed with Lyap Pratyaya are used to express actions related to doing something or doing something
+ * with a specific purpose.
+ */
+
+LYAP_KRIT_PRATYAYA: 'ल्यप्';
+
+/**
+ * "क्तिन् प्रत्यय" (Ktin Pratyaya) is used in Sanskrit grammar to form feminine gender nouns that denote the quality or
+ * state of the associated action or verb. When Ktin Pratyaya is added to the root verb (dhatu), it forms a feminine
+ * noun that represents the act, quality, or state of that verb.
+ *
+ * The words formed with Ktin Pratyaya always end with "ति" (ti) and are classified as feminine nouns.
+ *
+ * Examples of words formed with Ktin Pratyaya:
+ * - गम् (gam) + क्तिन् (Ktin Pratyaya) = गति: (gatiḥ) meaning "movement" or "motion."
+ * - कृ (kṛ) + क्तिन् (Ktin Pratyaya) = कृति: (kṛtiḥ) meaning "performance" or "action."
+ * - श्रु (śru) + क्तिन् (Ktin Pratyaya) = श्रुति: (śrutiḥ) meaning "hearing" or "listening."
+ * - मन् (man) + क्तिन् (Ktin Pratyaya) = मति: (matiḥ) meaning "thought" or "thinking."
+ * - स्त्रु (stru) + क्तिन् (Ktin Pratyaya) = स्त्रुति: (strutiḥ) meaning "spreading" or "dissemination."
+ *
+ * The words formed with Ktin Pratyaya help in expressing various qualities, actions, or states in the feminine gender.
+ */
+
+KTIN_KRIT_PRATYAYA: 'क्तिन्';
+
+/**
+ * "केलिमर् प्रत्यय" (Kelimar Pratyay) is used in Sanskrit grammar as a suffix that attaches to a root verb (dhatu) to
+ * form words that denote "doing" or "performing the action" represented by the verb. When Kelimar Pratyay is added
+ * to the root verb, it forms a word ending with "एलिम्" (elim), which represents the act of performing that action.
+ *
+ * Examples of words formed with Kelimar Pratyay:
+ * - भिद् (bhid) + केलिमर् (Kelimar Pratyay) = भिदेलिम् (bhideelim) meaning "performing the act of splitting."
+ * - पच् (pac) + केलिमर् (Kelimar Pratyay) = पचेलिम् (paceelim) meaning "performing the act of cooking."
+ *
+ * Kelimar Pratyay is used to create nouns that represent the action or doing of a particular verb.
+ */
+
+KELIMER_KRIT_PRATYAYA: 'केलिमेर्';
+
+/**
+ * "क्यप् प्रत्यय" (Kyap Pratyay) is used in Sanskrit grammar as a suffix that attaches to a root verb (dhatu) to form
+ * words ending with "अत्य" (aty). These words often represent actions or activities related to the meaning of the verb.
+ *
+ * Example of a word formed with Kyap Pratyay:
+ * - हन् (han) + क्यप् (Kyap Pratyay) = हत्य (hatya) meaning "killing" or "act of killing."
+ *
+ * Kyap Pratyay helps create nouns that represent the action or doing of a particular verb.
+ */
+
+KYAP_KRIT_PRATYAYA: 'क्यप्';
+
+/**
+ * "क्वसु प्रत्यय" (Kvasu Pratyay) is used in Sanskrit grammar with "भूतकाल – परस्मैपदी" (past tense - active voice) verbs.
+  * When added to such verbs, it forms words ending with "वस्" (vas), which function as adjectives.
+ *
+ * Example words formed with Kvasu Pratyay:
+ * - श्रु (shru) + क्वसु (Kvasu Pratyay) = श्रुवुवस् (shruvavas) meaning "having heard."
+ * - भू (bhu) + क्वसु (Kvasu Pratyay) = बभूवस् (babhuvash) meaning "having been."
+ *
+ * Kvasu Pratyay helps create adjectives describing past actions.
+ */
+
+KVASU_KRIT_PRATYAYA: 'क्वसु';
+
+/**
+ * "कानच् प्रत्यय" (Kanach Pratyay) is used in Sanskrit grammar with "लिट लकार" (lit lakara) verbs. When added to such verbs,
+ * it forms words ending with "आन" (aan), which function as adjectives.
+ *
+ * Example words formed with Kanach Pratyay:
+ * - युध् (yudh) + कानच् (Kanach Pratyay) = युयुधान (yuyudhaan) meaning "one who fought."
+ * - रुच् (ruch) + कानच् (Kanach Pratyay) = रुरूवान (ruruvaan) meaning "one who roared."
+ *
+ * Kanach Pratyay helps create adjectives describing actions or qualities of the past.
+ */
+
+KAANACH_KRIT_PRATYAYA: 'कानच्';
+
+/**
+ * "स्यतृ प्रत्यय" (Syatra Pratyay) is used in Sanskrit grammar with "भविष्यत् काल – परस्मैपदी" (bhavishyat kal - parasmaipadi)
+ * verbs. When added to such verbs, it forms words ending with "इत्" (it) or "स्यत्" (syat), which denote actions or
+ * events in the future tense.
+ *
+ * Example words formed with Syatra Pratyay:
+ * - भू (bhū) + स्यतृ (Syatra Pratyay) = भविष्यत् (bhaviṣyat) meaning "will be."
+ * - गम् (gam) + स्यतृ (Syatra Pratyay) = गमिष्यत् (gamiṣyat) meaning "will go."
+ * - स्था (sthā) + स्यतृ (Syatra Pratyay) = स्थास्यत् (sthāsyat) meaning "will stand."
+ * - पा (pā) + स्यतृ (Syatra Pratyay) = पास्यत् (pāsyat) meaning "will drink."
+ *
+ * Syatra Pratyay helps form verbs in the future tense.
+ */
+
+SYATRU_KRIT_PRATYAYA: 'स्यतृ';
+
+/**
+ * "स्यमान् प्रत्यय" (Syaman Pratyay) is used in Sanskrit grammar with "भविष्यत् काल – आत्मनेपदी" (bhavishyat kal - atmanepadi)
+ * verbs. When added to such verbs, it forms words ending with "आण" (āṇ) or "माण" (māṇ), which denote actions or events
+ * in the future tense.
+ *
+ * Example words formed with Syaman Pratyay:
+ * - सेव् (sev) + स्यमान् (Syaman Pratyay) = सेविष्यमाण (seviṣyamāṇ) meaning "will serve."
+ * - वृत् (vṛt) + स्यमान् (Syaman Pratyay) = वर्तिष्यमाण (vartiṣyamāṇ) meaning "will exist."
+ * - जन् (jan) + स्यमान् (Syaman Pratyay) = जनिष्यमाण (janiṣyamāṇ) meaning "will be born."
+ *
+ * Syaman Pratyay helps form verbs in the future tense for atmanepadi verbs.
+ */
+
+SYAMAAN_KRIT_PRATYAYA: 'स्यमान्';

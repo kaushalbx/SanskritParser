@@ -1,0 +1,31 @@
+grammar Vachya;
+
+
+vachya
+    :kartriVachya
+    |karmVachya
+    |bhavVachya
+    ;
+
+kartriVachya
+    :akarmKartriVachya
+    |sakarmakKartriVachya
+    ;
+
+akarmKartriVachya
+    :
+//    (subantPada WS )* ((upsarg'+')* kartriKarakam '+' prathmaVibhakti WS) (subantPada WS)* ((upsarg'+')* akarmakDhatu '+' LAKAR '+' TING_PRTYAY) (WS subantPada)* '|'
+//    |(subantPada WS )* ((upsarg'+')* akarmakDhatu '+' LAKAR '+' TING_PRTYAY) WS (subantPada WS)* ((upsarg'+')* kartriKarakam '+' prathmaVibhakti ) (WS subantPada)* '|'
+    ;
+
+sakarmakKartriVachya
+    :
+    ;
+
+karmVachya
+    :
+    ;
+
+bhavVachya
+    :
+    ;

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Sanskrit_Parser" />
         <module name="Sanskrit Parser New" />
         <module name="Sanskrit_Parser_New" />
       </profile>

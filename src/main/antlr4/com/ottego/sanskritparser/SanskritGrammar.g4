@@ -28,7 +28,7 @@ tingantPada
 tingatam
     :DHATU
     |atideshakDhatu
-    |UPSARG+tingatam
+    |UPSARG PLUS tingatam
     ;
 
 atideshakDhatu

@@ -14,6 +14,8 @@ vakya
 
 subantPada
     :subantam PLUS supPratyay
+    |SARVANAMA
+    | AVYAYA
     ;
 
 subantam
@@ -21,28 +23,64 @@ subantam
     |UPSARG PLUS subantam
     ;
 
+//tingantPada
+//    :tingatam PLUS vikaran PLUS lakar PLUS tingPratyaya
+//    ;
 tingantPada
-    :tingatam PLUS vikaran PLUS lakar PLUS tingPratyaya
-    ;
+     :tingatam PLUS lakar PLUS tingPratyaya
+     ;
 
 tingatam
-    :DHATU
-    |atideshakDhatu
+    :dhatu PLUS vikaran
     |UPSARG PLUS tingatam
     ;
 
-atideshakDhatu
-    :pratipadika PLUS ATIDESHAK_DHATU_PRATYAY
-    ;
 
 
 
-kridanta: DHATU PLUS kritPrtaya ;
+kridanta: aupdeshikDhatu PLUS kritPrtaya ;
 
-taddhitantata: kridanta PLUS taddhitPratyay ;
+taddhitantata: kridanta PLUS taddhitPratyay
+    | taddhitantata PLUS taddhitPratyay;
+
 supPratyay : vibhakti;
 
 vibhakti: PRATHMA_VIBHAKTI | DWITIYA_VIBHAKTI | TRITIYA_VIBHAKTI | CHATURTHI_VIBHAKTI | PANCHAMI_VIBHAKTI | SHASTI_VIBHAKTI | SAPTAMI_VIBHAKTI;
+
+
+
+/**
+* In Sanskrit grammar, the fundamental forms of verbs are called 'धातु' (Verb).
+* The 'धातु' is the basic building block of Sanskrit words. By combining 'धातु' with prefixes (upasargas),
+* suffixes (pratyayas), and through compound verbs, all words in Sanskrit (nouns, pronouns, verbs, etc.) are formed.
+* The term 'धातु' itself is formed by adding the 'तिन्' pratyaya to 'धा'. Some of the major 'धातु' include भू (to be),
+* स्था (to stand), ज्ञा (to know), युज् (to unite), गम् (to go), मन् (to think), दृश् (to see), and more.
+*
+* Dhatu Ganas are groups of verbs categorized based on their root forms and conjugation patterns in Sanskrit grammar.
+* There are ten Dhatu Ganas in total, each with its unique characteristics.
+*/
+/**
+ * ‘सनाद्यन्ता धातवः’ सूत्र से जिन प्रत्ययान्त धातुओं की धातु संज्ञा हुई है,
+ * इन धातुओं से कोई भी विकरण नहीं कहा गया। यहाँ लगने वाले विकरण पर विचार किया जाएगा.
+ */
+
+/**
+ * इसी प्रकार सन्, क्यच्, काम्यच्, क्यष्, क्यङ्, क्विप्, णिङ्, ईयङ्, णिच्, यक्, आय, यङ्
+ * ये 12 प्रत्यय लगाकर सनाद्यन्ता धातवः सूत्र से जो भी धातु बनेंगे,
+ * उनसे भी शप् ही लगेगा, क्योंकि इन धातुओं से भी अन्य कोई विकरण नहीं कहा गया है।
+ */
+
+dhatu : aupdeshikDhatu | atideshikDhatu;
+
+atideshikDhatu
+    :subantPada PLUS ATIDESHIK_DHATU_PRATYAY
+    ;
+
+aupdeshikDhatu:
+    BHVADI | ADADI | JUHOTYADI | DIVADI | SWADI |
+    TUDADI | RUDHADI | TANADI | KRIYADI | CHURADI;
+
+
 
 
 /**
@@ -117,9 +155,9 @@ taddhitPratyay: APTYARTH_TADHT_PRATYAY | DEVTARTH_TADHT_PRATYAY | READ_KNOW_TADH
 
 
 
-pratipadika: SARVANAMA | AVYAYA | kridanta | taddhitantata /*| SAMASA_PRATIPADIKA*/ ;
+pratipadika: kridanta | taddhitantata /*| samasa*/ ;
 
-
+samasa: subantPada PLUS subantPada+;
 
 lakar: titLakar | ngitLakar;
 

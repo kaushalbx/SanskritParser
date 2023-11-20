@@ -114,9 +114,6 @@ KARMO_PASANGRAH_NIPAT: 'न' | 'आ' | 'वा' | 'ह';
 PAD_PURNA_NARTHAK_NIPAT: 'नूनम्' | 'हि' | 'अथ' | 'खलु';
 
 
-ATIDESHIK_DHATU_PRATYAY: 'सन्' | 'क्यच्' | 'काम्यच्' | 'क्यड्' | 'क्यष्' | 'अचारक्विप्' | 'णिच्' | 'यङ्' | 'यक्' | 'आय' | 'ईयङ्' | 'णिङ्' ;
-
-
 
 APTYARTH_TADHT_PRATYAY: 'अण्' | 'अञ्' | 'ढक्' | 'यञ्' | 'फ़क्' | 'घ' | 'यत्' | 'अञ्' | 'ण्य' | 'आदि' ;
 
@@ -148,7 +145,7 @@ PURAN_TADHT_PRATYAY: 'उट्' | 'मट्' | 'तीय' | 'थुक्' | 
 
 STRI_PRATYAY: 'आ' | 'टाप्' | 'डाप्' | 'चाप्' | 'ई' | 'ङीप्' | 'ङीष्' | 'ऊ' | 'ऊङ्' ;
 
-ATIDESHAK_DHATU_PRATYAY :'सन्' | 'क्यच्' |'काम्यच्' |'क्यड्' |'क्यष्' |'अचारक्विप्' |'णिच्' |'यङ्' |'यक्' |'आय' |'ईयङ्' |'णिङ्' ;
+ATIDESHIK_DHATU_PRATYAY :'सन्' | 'क्यच्' |'काम्यच्' |'क्यड्' |'क्यष्' |'अचारक्विप्' |'णिच्' |'यङ्' |'यक्' |'आय' |'ईयङ्' |'णिङ्' ;
 
 
 
@@ -171,7 +168,7 @@ GATI: ;
 
 
 
-SAMASA_PRATIPADIKA: ;
+
 
 
 
@@ -556,31 +553,6 @@ GHYN_KRIT_PRATYAYA : 'घञ्';
 
 
 
-/**
-* In Sanskrit grammar, the fundamental forms of verbs are called 'धातु' (Verb).
-* The 'धातु' is the basic building block of Sanskrit words. By combining 'धातु' with prefixes (upasargas),
-* suffixes (pratyayas), and through compound verbs, all words in Sanskrit (nouns, pronouns, verbs, etc.) are formed.
-* The term 'धातु' itself is formed by adding the 'तिन्' pratyaya to 'धा'. Some of the major 'धातु' include भू (to be),
-* स्था (to stand), ज्ञा (to know), युज् (to unite), गम् (to go), मन् (to think), दृश् (to see), and more.
-*
-* Dhatu Ganas are groups of verbs categorized based on their root forms and conjugation patterns in Sanskrit grammar.
-* There are ten Dhatu Ganas in total, each with its unique characteristics.
-*/
-/**
- * ‘सनाद्यन्ता धातवः’ सूत्र से जिन प्रत्ययान्त धातुओं की धातु संज्ञा हुई है,
- * इन धातुओं से कोई भी विकरण नहीं कहा गया। यहाँ लगने वाले विकरण पर विचार किया जाएगा.
- */
-
-/**
- * इसी प्रकार सन्, क्यच्, काम्यच्, क्यष्, क्यङ्, क्विप्, णिङ्, ईयङ्, णिच्, यक्, आय, यङ्
- * ये 12 प्रत्यय लगाकर सनाद्यन्ता धातवः सूत्र से जो भी धातु बनेंगे,
- * उनसे भी शप् ही लगेगा, क्योंकि इन धातुओं से भी अन्य कोई विकरण नहीं कहा गया है।
- */
-
-
-DHATU:
-    BHVADI | ADADI | JUHOTYADI | DIVADI | SWADI |
-    TUDADI | RUDHADI | TANADI | KRIYADI | CHURADI;
 
 /**
 * Bhvadi-gana is the first category of verbs in Sanskrit grammar according to Panini's Dhatupatha. It starts with
